@@ -7,6 +7,9 @@ public class Radio {
     public int getCurrentStation() { return currentStation; }
 
     public void setCurrentStation(int newCurrentStation) {
+        if (newCurrentStation < 0) {
+            return;
+        }
         if (newCurrentStation > 9) {
             return;
         }
